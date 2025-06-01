@@ -117,8 +117,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* <div className="side-right"></div> */}
-
       <BarOpen left={left} setLeft={setLeft} />
 
       <MicOpen mic={mic} setMic={setMic} />
@@ -132,6 +130,7 @@ export default function App() {
       <div className="main" onClick={() => setAccount('none')}>
         <Boxs />
       </div>
+    </div >
       <div className="blank-screen"
         style={{
           visibility: left === '0' || mic === 'flex' || create === 'flex' ? 'visible' : 'hidden',
@@ -144,7 +143,6 @@ export default function App() {
         }}
       >
       </div>
-    </div >
   </>);
 }
 
