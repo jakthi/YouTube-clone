@@ -65,11 +65,11 @@ export default function App() {
               <CiSearch className='search-logo-child-left' />
             </div>
             <input className="search-input" type="text" placeholder='Search' />
-            <span className='search-delete'>&times;</span>
-          </div>
-          <div className='search-logo'>
-            <CiSearch className='search-logo-child' />
-            <span className="search-info">Search</span>
+            <span className='search-delete'><span>x</span></span>
+            <div className='search-logo'>
+              <CiSearch className='search-logo-child' />
+              <span className="search-info">Search</span>
+            </div>
           </div>
           <div className="mic-logo" onClick={() => setMic('flex')}>
             <IoMdMic className='mic-logo-child' />
@@ -132,10 +132,9 @@ export default function App() {
       <div className="main" onClick={() => setAccount('none')}>
         <Boxs />
       </div>
-
       <div className="blank-screen"
         style={{
-          visibility: left === '0' || mic === 'flex' || create === 'flex' ? 'visible' : '',
+          visibility: left === '0' || mic === 'flex' || create === 'flex' ? 'visible' : 'hidden',
           opacity: left === '0' ? 0.6 : mic === 'flex' ? 0.2 : 0,
         }}
         onClick={() => {
